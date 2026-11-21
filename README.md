@@ -14,11 +14,14 @@
 - **SoC、电源和启动。** RK3576 搭配 4 GB LPDDR4X、eMMC 和 RK806S-5。设计了 Buck/LDO 电源树、DDR 供电、VCCIO 电压域、上电配置、USB 下载、UART 和复位电路。
 - **八层 PCB。** 处理 BGA 扇出、LPDDR4X 字节组内等长和 DQ/DQS 匹配，并按高速信号的换层和回流路径布置参考平面。核心板设置了 L2、L5、L7 地参考层。
 
-| 核心板 PCB 原工程预览 | LPDDR4X 走线筛选 |
-| --- | --- |
-| [![核心板 PCB 布局](docs/images/core-layout.webp)](docs/images/core-layout.webp) | [![LPDDR4X 数据、选通和时钟走线](docs/images/core-ddr-traces.webp)](docs/images/core-ddr-traces.webp) |
+[![核心板 PCB 原工程预览](docs/images/core-layout.webp)](docs/images/core-layout.webp)
 
-右图由实际 PCB 走线筛选得到，跨铜层叠加显示。青色和紫色分别为 A、B 通道数据线，金色为选通与时钟。另见[核心板全层布线截图](docs/images/core-routing-overview.webp)。
+| LPDDR4X 走线 | eMMC 走线 |
+| --- | --- |
+| [![LPDDR4X 数据、选通和时钟走线](docs/images/core-ddr-traces.webp)](docs/images/core-ddr-traces.webp) | [![eMMC 数据、时钟与控制走线](docs/images/core-emmc-traces.webp)](docs/images/core-emmc-traces.webp) |
+| 青色与紫色为两组 DQ，金色为 DQS 和时钟。 | 青色为 D0–D7，金色为时钟与选通，紫色为命令和复位。 |
+
+两张筛选图均从核心板 PCB 的实际走线提取，跨铜层叠加显示。另见[核心板全层布线截图](docs/images/core-routing-overview.webp)。
 
 ## 底板
 
@@ -31,8 +34,6 @@
 
 底板也采用八层 PCB。两路 PCIe 分别设计参考时钟、AC 耦合、复位及供电。PCIe 数据对的差分阻抗设计目标为 85 Ω，REFCLK 为 100 Ω。
 
-| 底板 PCB 原工程预览 | 底板高速走线筛选 |
-| --- | --- |
-| [![底板八层 PCB 布局](docs/images/carrier-layout.webp)](docs/images/carrier-layout.webp) | [![底板两路 PCIe 与 MIPI CSI-2 走线](docs/images/carrier-interface-traces.webp)](docs/images/carrier-interface-traces.webp) |
+[![底板八层 PCB 原工程预览](docs/images/carrier-layout.webp)](docs/images/carrier-layout.webp)
 
-右图中青色为 PCIe 0，金色为 PCIe 1，紫色为 RK628F 的 CSI-2 主链路。底板实物照片待补。图表中的接口速率、分辨率和阻抗为设计规格。
+底板实物照片待补。图表中的接口速率、分辨率和阻抗为设计规格。
