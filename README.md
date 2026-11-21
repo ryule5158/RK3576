@@ -16,12 +16,7 @@
 
 [![核心板 PCB 原工程预览](docs/images/core-layout.webp)](docs/images/core-layout.webp)
 
-| LPDDR4X 走线 | eMMC 走线 |
-| --- | --- |
-| [![LPDDR4X 数据、选通和时钟走线](docs/images/core-ddr-traces.webp)](docs/images/core-ddr-traces.webp) | [![eMMC 数据、时钟与控制走线](docs/images/core-emmc-traces.webp)](docs/images/core-emmc-traces.webp) |
-| 青色与紫色为两组 DQ，金色为 DQS 和时钟。 | 青色为 D0–D7，金色为时钟与选通，紫色为命令和复位。 |
-
-两张筛选图均从核心板 PCB 的实际走线提取，跨铜层叠加显示。另见[核心板全层布线截图](docs/images/core-routing-overview.webp)。
+[查看核心板全层 PCB 截图](docs/images/core-routing-overview.webp)
 
 ## 底板
 
