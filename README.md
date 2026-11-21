@@ -9,6 +9,10 @@
 
 **[项目展示 PDF](docs/RK3576-Project-Portfolio.pdf)** · **[下载核心板 EDA](hardware/core-board/RK3576-Core.epro2?raw=true)** · **[下载底板 EDA](hardware/carrier-board/RK3576-Carrier.epro2?raw=true)** · [硬件工程索引](hardware/)
 
+## 系统框图
+
+[![RK3576 核心板与底板系统框图](docs/images/system-block-diagram.webp)](docs/images/system-block-diagram.webp)
+
 ## 核心板
 
 - **SoC、电源和启动。** RK3576 搭配 4 GB LPDDR4X、eMMC 和 RK806S-5。设计了 Buck/LDO 电源树、DDR 供电、VCCIO 电压域、上电配置、USB 下载、UART 和复位电路。
